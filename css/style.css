@@ -1,0 +1,578 @@
+:root{
+    --theme-color-3:#66FFCC;
+    --theme-color-2:#FF0066;
+    --theme-color-1:#4989ff;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+::-webkit-scrollbar-track{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(224, 222, 222);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    cursor: pointer;
+}
+header{
+    height: 100vh;
+}
+.navbar{
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    box-shadow: none;
+    transition: all 0.5s;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.navbar-brand{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:600;
+    color: var(--theme-color-1);
+}
+.navbar-toggler{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: var(--theme-color-1);
+    margin:5px 0;
+    pointer-events: none;
+}
+.collapse{
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.2s;
+}
+.collapse.active{
+    height: 250px;
+}
+.navbar-nav{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.navbar-nav li{
+    margin: 0 10px;
+    padding: 10px;
+    width: 100%;
+}
+.navbar-nav li a{
+    color: gray;
+    font-weight: semibold;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 18px;
+}
+.navbar-nav li a.btn{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    transition: all 0.2s;
+    background: var(--theme-color-1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--theme-color-1);
+}
+.navbar-nav li a:hover{
+    color: var(--theme-color-1);
+    background: transparent;
+}
+.navbar-nav li a.active{
+    color: var(--theme-color-1);
+}
+/* Hero Section */
+.hero{
+    background: url('../img/doctor2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.container{ 
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 20px;
+}
+.container h1{
+    font-size: 2.5em;
+    font-weight: bolder;
+    font-family: arial;
+}
+.container h1 span{
+    font-weight:lighter;
+    display: block;
+}
+.container h1{
+    font-weight: bolder;
+}
+.container p{
+    color: gray;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.container .btn{
+    padding: 15px 20px;
+    background: var(--theme-color-1);
+    width: max-content;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1em;
+    transition: all 0.5s;
+    border: 1px solid var(--theme-color-1);
+    margin-top: 1em;
+}
+.container .btn:hover{
+    background: transparent;
+    color: var(--theme-color-1);
+}
+/* Services Section */
+.services{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+}
+.services div{
+    padding: 50px 30px;
+    background-color: rgb(56, 149, 255);
+}
+.services div h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.services div p{
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.services div .btn{
+    padding: 10px 20px;
+    border: 1px solid white;
+    display: block;
+    width: max-content;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+.services div .btn:hover{
+    background-color: white;
+    color: var(--theme-color-1);
+}
+.services div:nth-child(even){
+    background-color: var(--theme-color-1);
+}
+/* Content Area */
+.content{
+    background-color: #f5fbff;
+    padding: 30px 10px;
+}
+.content .wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em 0;
+}
+.content h3{
+    font-size: 2.5em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.content p{
+    margin-top: 1em;
+    color: gray;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-center{
+    text-align: center;
+}
+.content .items{
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 2em;
+}
+.content .items div{
+    text-align: start;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    background: white;
+}
+.content .items div img{
+    width: 100%;
+    height: auto;
+}
+.content .items div .description{
+    padding: 30px 30px;
+    box-shadow: none;
+}
+.content .items div .description h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.content .items div .description a{
+    color: rgb(48, 124, 236);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 1em;
+    display: block;
+}
+/* Footer Seciton */
+footer{
+    background: rgb(31, 30, 30);
+    min-height: auto;
+    padding: 1em;
+}
+footer .cols{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap:1em;
+}
+.col-span-2{
+    grid-column: span 1/ span 1;
+}
+footer .cols div{
+    padding: 1em;
+}
+footer .cols div h5{
+    color: white;
+    font-size: 1.7em;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1em;
+}
+footer .cols div p{
+    color: rgb(182, 181, 181);
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+footer .cols div ul{
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    line-height: 2.2em;
+}
+footer .cols div ul li a{
+    color: rgb(199, 199, 199);
+    text-decoration: none;
+    font-size: 17px;
+}
+footer .copy{
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(199, 199, 199);
+    margin-top: 2em;
+}
+/* Quote Section */
+.quote{
+    height: 90vh;
+    padding: 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    color: white;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url('../img/doctor2.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.quote blockquote{
+    margin-top: 2em;
+}
+/* Emergency Section */
+.emergency{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+}
+.emergency .contact{
+    padding:3em;
+    min-height: 230px;
+    background-image:linear-gradient(rgba(106, 182, 253,0.5),rgb(106, 182, 253,0.5)),url('../img/doctor4.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.emergency .appointment{
+    padding:3em;
+    min-height: 230px;
+    background-image:linear-gradient(rgba(106, 182, 253,0.5),rgb(106, 182, 253,0.5)),url('../img/doctor3.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.emergency div h5{
+    font-size: 1.5em;
+    font-weight:lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-bottom: 0.7em;
+}
+.emergency div p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.emergency div .btn{
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    width: max-content;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s;
+}
+.emergency div .btn:hover{
+    background: white;
+    color: var(--theme-color-1);
+}
+/* Modal Section */
+.modal{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+.modal.active{
+    display: flex;
+}
+.modal .modal-content{
+    background: white;
+    width: 100%;
+    border-radius: 3px;
+    pointer-events: visible;
+}
+.modal .modal-content .modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 2em;
+}
+.modal .modal-content .modal-header h5{
+    color: var(--theme-color-1);
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.modal .modal-content .modal-header a{
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    color: gray;
+}
+.modal .modal-content .modal-body{
+    padding: 1.5em;
+}
+/* Doctors Section */
+.doctors{
+    height: auto;
+    padding: 4em 1em;
+}
+.doctors .title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: var(--theme-color-1);
+}
+.doctors .containerr{
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+.doctors .containerr .row{
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+}
+.doctors .containerr .row::-webkit-scrollbar{
+    display: none;
+}
+.doctors .containerr .row .item{
+    padding: 1em;
+}
+.doctors .containerr .row .item .wrapper{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.doctors .containerr .row .item .wrapper .cnt{
+    padding: 10px 20px;
+}
+.doctors .containerr .row .item .wrapper .cnt h5{
+    font-size: 20px;
+    color: var(--theme-color-1);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.doctors .containerr .row .item .wrapper .cnt span{
+    font-size:16px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+/* Media Dreakpoints */
+@media (min-width:576px) {
+    .col-span-2{
+        grid-column: span 1/ span 1;
+    }
+    footer{
+        padding: 2em;
+    }
+    footer .cols{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .content .items{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .content .wrapper{
+        padding: 4em 0;
+    }
+}
+@media (min-width:768px) {
+    .col-span-2{
+        grid-column: span 1/ span 1;
+    }
+    footer .cols{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .services{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .content .wrapper{
+        max-width: 768px;
+    }
+    .content .items{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:992px) {
+    .col-span-2{
+        grid-column: span 2/ span 2;
+    }
+    footer .cols{
+        grid-template-columns: repeat(5,minmax(0,1fr));
+    }
+    .navbar{
+        padding: 5px 60px;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .navbar-nav{
+        flex-direction: row;
+        width: max-content;
+    }
+    .collapse{
+        width: max-content;
+        height: auto;
+    }
+    .collapse.active{
+        height: auto;
+    }
+    .hero{
+        background: url('../img/doctor.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment:fixed;
+    }
+    .container{
+        text-align: start;
+    }
+    .container h1{
+        font-size: 4em;
+    }
+    .container p{
+        font-size: 21px;
+    }
+    .container .btn{
+        margin: 0 0;
+        margin-top: 1em;
+    }
+    .services{
+        grid-template-columns: repeat(3,minmax(200px,1fr));
+    }
+    .content .items{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .content .wrapper{
+        max-width: 1100px;
+        padding: 4em 0;
+    }
+    .quote{
+        background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url('../img/doctor.png');
+    }
+    .emergency{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
